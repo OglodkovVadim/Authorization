@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/image">
+        <file>profile</file>
+        <file>password</file>
+        <file>hide</file>
+        <file>show</file>
+    </qresource>
+</RCC>
