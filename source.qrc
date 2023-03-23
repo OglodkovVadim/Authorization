@@ -4,5 +4,6 @@
         <file>password</file>
         <file>hide</file>
         <file>show</file>
+        <file>main.jpg</file>
     </qresource>
 </RCC>
