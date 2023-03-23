@@ -90,6 +90,14 @@ QToolButton {
 	image: url(:/image/hide);
 }
 
+QToolButton:hover {
+	image: url(:/image/hideHover);
+}
+
+QToolButton:pressed {
+	image: url(:/image/hide);
+}
+
 QLineEdit  {
 	font-size: 20px;
 	padding: 5px;

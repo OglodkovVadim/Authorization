@@ -8,7 +8,6 @@
 #include <QRandomGenerator>
 #include <QSqlRecord>
 #include <QCryptographicHash>
-#include <QtTest/QTest>>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class Authorization; }
@@ -33,6 +32,10 @@ private slots:
 
     void on_sign_clicked();
 
+
+    void on_login_input_textChanged(const QString &arg1);
+
+    void on_password_input_textChanged(const QString &arg1);
 
 private:
     Ui::Authorization *ui;

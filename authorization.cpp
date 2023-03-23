@@ -36,11 +36,35 @@ void Authorization::on_hide_clicked()
 {
     if (ui->password_input->echoMode() == QLineEdit::Normal) {
         ui->password_input->setEchoMode(QLineEdit::Password);
-        ui->hide->setStyleSheet("image: url(:/image/hide);");
+        ui->hide->setStyleSheet("QToolButton {"
+                                "border: none;"
+                                "background-color:none;"
+                                "image: url(:/image/hide);"
+                            "}"
+
+                            "QToolButton:hover {"
+                                "image: url(:/image/hideHover);"
+                            "}"
+
+                            "QToolButton:pressed {"
+                                "image: url(:/image/hide);"
+                            "}");
     }
     else {
         ui->password_input->setEchoMode(QLineEdit::Normal);
-        ui->hide->setStyleSheet("image: url(:/image/show);");
+        ui->hide->setStyleSheet("QToolButton {"
+                                "border: none;"
+                                "background-color:none;"
+                                "image: url(:/image/show);"
+                            "}"
+
+                            "QToolButton:hover {"
+                                "image: url(:/image/showHover);"
+                            "}"
+
+                            "QToolButton:pressed {"
+                                "image: url(:/image/show);"
+                            "}");
     }
 }
 
@@ -102,5 +126,23 @@ void Authorization::on_sign_clicked()
         ui->login_widget->setStyleSheet("QWidget#login_widget {border-bottom: 1px solid #eee}");
         ui->password_widget->setStyleSheet("QWidget#password_widget {border-bottom: 1px solid #eee}");
     }
+}
+
+
+void Authorization::on_login_input_textChanged(const QString &arg1)
+{
+    ui->login_widget->setStyleSheet("QWidget#login_widget {"
+                                   "background-color:none;"
+                                   "border-bottom: 1px solid #eee;"
+                               "}");
+}
+
+
+void Authorization::on_password_input_textChanged(const QString &arg1)
+{
+    ui->password_widget->setStyleSheet("QWidget#password_widget {"
+                                      "background-color: none;"
+                                      "border-bottom: 1px solid #eee;"
+                                  "}");
 }
 
