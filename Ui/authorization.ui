@@ -246,7 +246,8 @@ background-color:none;</string>
      </property>
      <property name="styleSheet">
       <string notr="true">image: url(:/image/password);
-padding-right: 3px;</string>
+padding-right: 3px;
+background-color:none;</string>
      </property>
      <property name="text">
       <string/>
